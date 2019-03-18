@@ -17,8 +17,11 @@ import org.aspectj.lang.annotation.Before;
 @Aspect
 public class TreeAspect {
 
-    public static final String TAG = "cxz----->>";
+    private static final String TAG = "cxz----->>";
 
+    /**
+     * 切入点：Activity 中以 on 开头的所有方法执行之前
+     */
     @Before("execution(* android.app.Activity.on*(..))")
     public void onActivityMethodBefore(JoinPoint joinPoint) {
         String key = joinPoint.getSignature().toString();

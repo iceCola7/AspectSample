@@ -25,9 +25,23 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 method2();
+                testMethod();
             }
         });
 
+        findViewById(R.id.button3).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                testMethod2();
+            }
+        });
+
+        findViewById(R.id.button4).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                testMethod3();
+            }
+        });
     }
 
     @DebugTree
@@ -49,6 +63,25 @@ public class MainActivity extends AppCompatActivity {
 
         Log.e(TAG, "计算结果：" + result);
 
+    }
+
+    public void testMethod() {
+        Log.e(TAG, "testMethod: 方法执行了...");
+    }
+
+    public void testMethod2() {
+        Student student = new Student("张三", 20);
+        Log.e(TAG, "testMethod2: " + student.getAge());
+        student.setAge(30);
+        Log.e(TAG, "testMethod2: " + student.getAge());
+    }
+
+    public void testMethod3() {
+        try {
+            int a = 10 / 0;
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     @Override

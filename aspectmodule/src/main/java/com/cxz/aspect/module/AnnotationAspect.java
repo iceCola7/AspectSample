@@ -16,8 +16,9 @@ import org.aspectj.lang.annotation.Pointcut;
 @Aspect
 public class AnnotationAspect {
 
-    public static final String TAG = "cxz----->>";
+    private static final String TAG = "cxz----->>";
 
+    // 切入点： DebugTree 注解
     @Pointcut("execution(@com.cxz.aspect.sample.DebugTree * * (..))")
     public void DebugTraceMethod() {
     }
