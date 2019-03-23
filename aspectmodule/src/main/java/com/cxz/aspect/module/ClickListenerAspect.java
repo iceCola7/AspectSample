@@ -19,6 +19,9 @@ public class ClickListenerAspect {
     private static Long lastClick = 0L;
     private static final Long FILTER_TIME = 1000L;
 
+    /**
+     * 切入点：View 中 OnClickListener 接口的 onClick 方法
+     */
     @Around("execution(* android.view.View.OnClickListener.onClick(..))")
     public void clickFilter(ProceedingJoinPoint proceedingJoinPoint) {
         if (System.currentTimeMillis() - lastClick >= FILTER_TIME) {

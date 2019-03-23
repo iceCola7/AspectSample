@@ -11,7 +11,7 @@ import org.aspectj.lang.annotation.Pointcut;
 /**
  * @author admin
  * @date 2019/3/18
- * @desc 注解的处理方式
+ * @desc 演示自定义注解的处理方式
  */
 @Aspect
 public class AnnotationAspect {

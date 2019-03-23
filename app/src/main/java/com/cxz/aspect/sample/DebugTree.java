@@ -8,7 +8,7 @@ import java.lang.annotation.Target;
 /**
  * @author chenxz
  * @date 2019/3/18
- * @desc
+ * @desc 自定义注解类
  */
 @Retention(RetentionPolicy.CLASS)
 @Target({ElementType.METHOD, ElementType.CONSTRUCTOR})
