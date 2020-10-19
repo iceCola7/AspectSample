@@ -1,9 +1,9 @@
 package com.cxz.aspect.sample;
 
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
-import android.view.View;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -14,33 +14,21 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        findViewById(R.id.button).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                method1();
-            }
+        findViewById(R.id.button).setOnClickListener(v -> {
+            method1();
         });
 
-        findViewById(R.id.button2).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                method2();
-                testMethod();
-            }
+        findViewById(R.id.button2).setOnClickListener(v -> {
+            method2();
+            testMethod();
         });
 
-        findViewById(R.id.button3).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                testMethod2();
-            }
+        findViewById(R.id.button3).setOnClickListener(v -> {
+            testMethod2();
         });
 
-        findViewById(R.id.button4).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                testMethod3();
-            }
+        findViewById(R.id.button4).setOnClickListener(v -> {
+            testMethod3();
         });
     }
 
